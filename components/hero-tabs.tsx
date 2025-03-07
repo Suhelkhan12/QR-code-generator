@@ -10,7 +10,7 @@ const HeroTabs = () => {
     <Tabs
       defaultValue="url"
       onValueChange={setActiveTab}
-      className="w-full rounded-sm"
+      className="w-1/2 rounded-sm "
     >
       <TabsList className="grid w-full grid-cols-2 mb-2 rounded-sm h-12 border">
         <TabsTrigger

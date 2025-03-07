@@ -5,7 +5,7 @@ import { Card, CardContent } from "./ui/card";
 const HeroMain = () => {
   return (
     <Card className="rounded-sm">
-      <CardContent className="px-6 flex gap-10">
+      <CardContent className="px-6 flex lg:flex-row flex-col gap-10 ">
         <HeroTabs />
         <QrCode />
       </CardContent>

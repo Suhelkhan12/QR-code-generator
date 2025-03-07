@@ -1,10 +1,14 @@
 import React from "react";
+import { Card, CardContent } from "./ui/card";
+import QrCodeColor from "./qr-code-color";
 
 const QrCode = () => {
   return (
-    <div className="w-full bg-black flex items-center justify-center text-white rounded-sm grow">
-      QrCode
-    </div>
+    <Card className="grow rounded-sm py-4">
+      <CardContent className=" px-4">
+        <QrCodeColor />
+      </CardContent>
+    </Card>
   );
 };
 
