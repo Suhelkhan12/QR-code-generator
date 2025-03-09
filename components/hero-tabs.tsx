@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { Link, Mail } from "lucide-react";
+import EmailTab from "./email-tab";
+import UrlTab from "./url-tab";
 
 const HeroTabs = () => {
   const [activeTab, setActiveTab] = useState<string>("url");
@@ -10,7 +12,7 @@ const HeroTabs = () => {
     <Tabs
       defaultValue="url"
       onValueChange={setActiveTab}
-      className="w-1/2 rounded-sm "
+      className="w-full lg:w-1/2 rounded-sm "
     >
       <TabsList className="grid w-full grid-cols-2 mb-2 rounded-sm h-12 border">
         <TabsTrigger
@@ -32,8 +34,12 @@ const HeroTabs = () => {
         </TabsTrigger>
       </TabsList>
 
-      <TabsContent value="url">url</TabsContent>
-      <TabsContent value="email">email</TabsContent>
+      <TabsContent value="url">
+        <UrlTab />
+      </TabsContent>
+      <TabsContent value="email">
+        <EmailTab />
+      </TabsContent>
     </Tabs>
   );
 };
